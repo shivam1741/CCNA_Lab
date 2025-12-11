@@ -52,49 +52,75 @@ So, we create logical (virtual) interfaces called subinterfaces on that single p
    ```
 
 ### Cisco Project 
-![router on a stick](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202025-12-11%20184822.png)
-* In this project Firstly I divided a switch into two vlan (VLAN 10, VLAN 20) by using some commands   
-After going to configure mode I created vlan using  ```valn 10``` then gave name ```name IT_support``` after that I came bank to configure mode and then again created a vlan using ```vlan 20``` and gave name ```name NOC_Engineer```.
-* Now it's time to tell the interface port that which interface port comes in which vlan for this we need use ```interface range g 1/0/2-5``` then ```switchport mode access``` after that ```switchport access vlan 10```, And I did the same to vlan 20 ```int range g 1/0/6-8``` then ```switchport mode access``` after that ```switchport access vlan 20```.    
-  ```
-  interface range g 1/0/2-5
-  switchport mode access
-  switchport access vlan 10
-  ```
-  ```
-  int range g 1/0/6-8
-  switchport mode access
-  switchport access vlan 20
-  ```
-
-* After this I did router on a stick means divide a interface into two subinterface for different vlan so they can communicate easily, I went to the interface where the router is connected to switch (trunk port) using command ```int g 0/0/0``` and using the command ```no shut``` I turned the interface ON and then I came back to configure mode after that I divided the interface into two subinterface using ```int g 0/0/0.10``` and then ```encapsulation dot1Q 10``` after that assigned IP to the subinterface then came to configure mode and did same for the 2nd subinterface.
-  ```
-  int g 0/0/0
-  no shut
-  exit // come back to configure mode
-  int g 0/0/0.10 // created a subinterface for vlan 10
-  encapsulation dot1Q 10
-  ip adderess 192.168.10.1 255.255.255.0 // assigned ip to subinterface
-  ```
-  ```
-  exit // come back to configure mode
-  int g 0/0/0.20 // created a subinterface for vlan 20
-  encapsulation dot1Q 20
-  ip adderess 192.168.20.1 255.255.255.0 // assigned ip to subinterface
-  ```
-
- * Actually here I used DHCP servers for each VLAN so I needed to tell which DHCP is for which vlan so for that I assigned the port which was connected to DHCP to vlan 10 and did the same for 2nd DHCP server.
-  
-   ```
-   int g 1/0/8
-   switchport mode access
-   switchport access vlan 10
+![router on a stick](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202025-12-11%20184822.png) 
+1. ***Creating VLANs on the Switch***   
+In this project, I first divided a switch into two VLANs (VLAN 10 and VLAN 20).   
+After entering global configuration mode, I created each VLAN:
     ```
+    vlan 10
+    name IT_support
+    exit
+    ```
+    ```
+    vlan 20
+    name NOC_Engineer
+    exit
+    ```
+2. ***Assigning Ports to VLANs***   
+Now it's time to tell the interface port that which interface port comes in which vlan for this we need use ```interface range g 1/0/2-5``` then ```switchport mode access``` after that ```switchport access vlan 10```, And I did the same for vlan 20 ```int range g 1/0/6-8``` then ```switchport mode access``` after that ```switchport access vlan 20```.
+    ```
+    interface range g 1/0/2-5
+    switchport mode access
+    switchport access vlan 10
+    ```
+   For VLAN 20   
+    ```
+    int range g 1/0/6-8   
+    switchport mode access   
+    switchport access vlan 20
+    ```
+
+3. ***Configuring Router-on-a-Stick (Inter-VLAN Routing)***    
+After this I did router on a stick means divide a interface into two subinterface for different vlan so they can communicate easily, I went to the interface where the router is connected to switch (trunk port) using command ```int g 0/0/0``` and using the command ```no shut``` I turned the interface ON and then I came back to configure mode after that I divided the interface into two subinterface using ```int g 0/0/0.10``` and then ```encapsulation dot1Q 10``` after that assigned IP to the subinterface then came to configure mode and did same for the 2nd subinterface.
+    
    ```
-   int g 1/0/9
-   switchport mode access
-   switchport access vlan 20
+    int g 0/0/0
+    no shut
+    exit // come back to configure mode
+    int g 0/0/0.10 // created a subinterface for vlan 10
+    encapsulation dot1Q 10
+    ip adderess 192.168.10.1 255.255.255.0 // assigned ip to subinterface
    ```
- 
+   For 2nd subinterface   
+    
+   ```
+    exit // come back to configure mode   
+    int g 0/0/0.20 // created a subinterface for vlan 20   
+    encapsulation dot1Q 20   
+    ip adderess 192.168.20.1 255.255.255.0 // assigned ip to subinterface
+   ```
+
+
+ 4. ***Configuring DHCP Servers for Each VLAN***   
+ Actually here I used DHCP servers for each VLAN so I needed to tell which DHCP is for which vlan so for that I assigned    the port which was connected to DHCP to vlan 10 and did the same for 2nd DHCP server.
+  
+     ```
+     int g 1/0/8
+     switchport mode access
+     switchport access vlan 10
+     ```  
+     For 2nd DHCP Server
+     ```
+     int g 1/0/9
+     switchport mode access
+     switchport access vlan 20
+     ```
+5. ***Configuring the Trunk Port (Most Important Step)***    
+Now the last step is configuring a trunk or setting a switchport to trunk mode in a switch, for that after going to configure mode I went to that interface port from where trunk is connected.
+    ```
+    interface GigabitEthernet 1/0/1
+    switchport mode trunk
+    switchport trunk allowed vlan 10,20
+    ```
 
 
