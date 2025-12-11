@@ -83,6 +83,18 @@ After going to configure mode I created vlan using  ```valn 10``` then gave name
   ip adderess 192.168.20.1 255.255.255.0 // assigned ip to subinterface
   ```
 
- * Actually here I used DHCP servers for each VLAN so I needed to tell which DHCP is for which vlan so Here I needed  
+ * Actually here I used DHCP servers for each VLAN so I needed to tell which DHCP is for which vlan so for that I assigned the port which was connected to DHCP to vlan 10 and did the same for 2nd DHCP server.
+  
+   ```
+   int g 1/0/8
+   switchport mode access
+   switchport access vlan 10
+    ```
+   ```
+   int g 1/0/9
+   switchport mode access
+   switchport access vlan 20
+   ```
+ 
 
 
