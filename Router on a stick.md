@@ -49,4 +49,4 @@ So, we create logical (virtual) interfaces called subinterfaces on that single p
    encapsulation dot1Q 30
    ip address 192.168.30.1 255.255.255.0
 
-    ```
+   ```
