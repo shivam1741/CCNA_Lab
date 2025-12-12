@@ -18,4 +18,4 @@
 ### Using DHCP in a Network
 For providing DHCP services in a network, we can either use a dedicated DHCP server or configure a router or Layer 3 switch to function as a DHCP server after enabling the required settings.
 ### DHCP configuration on Router(Cisco Project)
-![DHCP configuration on Router]()
+![DHCP configuration on Router](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202025-12-12%20105724.png)
