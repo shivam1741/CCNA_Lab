@@ -1,4 +1,4 @@
-## How can we assign DHCP to router or switch(L3), we use following command for this:
+## DHCP configuration on Router
 
 1) ``` ip dhcp pool <MYPOOL> ``` = Router needs a “pool name” to store DHCP settings.
 2) ``` network <192.168.1.0 255.255.255.0> ``` = Router must know which subnet to allocate addresses from.
