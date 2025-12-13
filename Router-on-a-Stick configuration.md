@@ -123,4 +123,28 @@ Now the last step is configuring a trunk or setting a switchport to trunk mode i
     switchport trunk allowed vlan 10,20
     ```
 
+## Note
+### Why is encapsulation dot1Q needed?
+* In Router-on-a-Stick, one physical router interface is connected to a switch trunk port.
+* Multiple VLANs share the same physical link
+* Router must know which packet belongs to which VLAN
+* ```dot1Q``` tagging solves this by adding a VLAN ID tag inside the Ethernet frame.
 
+### Important points to remember
+* encapsulation dot1Q is used only on sub-interfaces
+* It is mandatory for Router-on-a-Stick
+* One sub-interface = one VLAN
+* Without this command, Inter-VLAN routing will not work
+
+### What is VLAN Tagging?
+* VLAN tagging is a technique used to identify which VLAN a data frame belongs to when multiple VLANs share the same physical network link.
+* In simple words:   
+> VLAN tagging puts a VLAN ID label inside a data frame so devices know which VLAN the data belongs to.
+
+### Why VLAN Tagging Is Needed
+Normally, a network cable can carry traffic for only one VLAN.   
+But in real networks:
+
+* One cable often carries traffic for many VLANs
+* Example: Switch ↔ Switch or Switch ↔ Router links   
+To avoid confusion, VLAN tagging is used.
