@@ -131,8 +131,6 @@ Packets are sent to the router, then forwarded to the destination network.
 * SSH
 * DHCP
 
----
-
 ## Key Exam Points (CCNA)
 
 * First packet in LAN communication → ARP
@@ -141,8 +139,51 @@ Packets are sent to the router, then forwarded to the destination network.
 * Reachability check → ICMP
 * Loop prevention → STP
 
----
 
 **Golden Rule:**
 ARP enables communication, DNS finds IPs, TCP/UDP transfer data, ICMP tests the network.
+
+----
+
+## NOTE
+### Does a switch send STP without any command?
+✅ YES
+
+### Why does a switch send STP automatically?   
+A switch sends STP to:
+* Check whether other switches are connected
+* Prevent Layer-2 loops
+* Decide which port should block or forward
+* Maintain a loop-free topology
+* So yes, it is always checking the network, even if there is no loop right now.
+
+### When exactly does a switch send STP by default?   
+Without any command, a switch sends BPDU packets:
+* When the switch powers on
+* Every 2 seconds (hello time)
+* When a topology change occurs
+* When redundant paths exist
+
+### Important CCNA facts
+
+* Default STP is enabled
+* Default mode on Cisco switches is PVST+
+* STP runs on all VLANs
+* STP works at Layer 2
+* STP uses BPDUs, not IP packets
+
+### What if there is only ONE switch?
+
+* Switch still sends BPDUs
+* It considers itself Root Bridge
+* No port is blocked
+
+### When does STP NOT send packets?
+
+* If STP is manually disabled
+(not recommended)
+* End devices (PCs, servers) never send STP
+
+### One-line exam answer
+> A switch sends STP BPDUs by default to detect loops and maintain a stable Layer-2 network.
 
