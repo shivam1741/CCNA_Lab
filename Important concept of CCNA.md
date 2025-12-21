@@ -1,6 +1,5 @@
 # Packets Sent During Network Communication
 
-This note explains **all types of packets** that are exchanged when a device communicates with another device **inside the same network** and **outside the network**.
 
 ## 1. Communication Inside the Same Network (Same LAN)
 
