@@ -110,46 +110,45 @@ With overload:
 
 
 ## PAT Configuration (CCNA Lab)
-![Cisco lab]()
+![Cisco lab](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202025-12-25%20113654.png)
 
 ### **Step 1: Assign inside & outside interfaces**
 
-```
-interface g0/0
+ ```
+ interface g 0/0/0
  ip nat inside
-!
-interface g0/1
+
+ interface g 0/0/1
  ip nat outside
-```
+ ```
 
 ### **Step 2: Create ACL to define inside private network**
 
 ```
-access-list 1 permit 192.168.1.0 0.0.0.255
+access-list 1 permit 10.1.1.0 0.0.0.255
 ```
 
-🔹 **0.0.0.255** = wildcard mask (opposite of subnet mask)
+* **0.0.0.255** = wildcard mask (opposite of subnet mask)
+* Here we can use ```any``` instead of ```10.1.1.0 0.0.0.255```
 
----
+
 
 ### **Step 3: NAT Overload (PAT)**
 
 ```
-ip nat inside source list 1 interface g0/1 overload
+ip nat inside source list 1 interface g 0/0/1 overload
 ```
-
-### 💡 Breakdown of this command:
+***Breakdown of this command:***
 
 * **ip nat inside** → NAT traffic direction
 * **source** → translate inside source IP
 * **list 1** → use ACL 1
-* **interface g0/1** → use public IP of this interface
+* **interface g 0/0/1** → use public IP of this interface
 * **overload** → allow many private IPs to share one public IP
   using unique port numbers
 
----
 
-# 🔍 7. What Is Wildcard Mask (like 0.0.0.255)?**
+## What Is Wildcard Mask (like 0.0.0.255)?**
 
 Wildcard mask is opposite of subnet mask.
 
@@ -158,20 +157,18 @@ Wildcard mask is opposite of subnet mask.
 
 Wildcard is used in **ACLs** to match a range of IPs.
 
----
 
-# 🎯 8. NAT without Overload (Dynamic NAT)
+## NAT without Overload (Dynamic NAT)
 
 ```
 ip nat inside source list 1 pool MYPOOL
 ```
 
-💥 **Limitation:**
-ONLY ONE private device can go out per public IP.
+**Limitation:**
+* ONLY ONE private device can go out per public IP.
 
----
 
-# 🌈 9. How PAT (Overload) Actually Works Internally
+## How PAT (Overload) Actually Works Internally
 
 Example:
 PC1 → 192.168.1.10
@@ -190,9 +187,8 @@ Router creates translations like:
 
 Same IP → different port numbers.
 
----
 
-# 🧪 **10. Useful NAT Verification Commands**
+## Useful NAT Verification Commands
 
 ### Show NAT translations
 
@@ -206,27 +202,5 @@ show ip nat translations
 show ip nat statistics
 ```
 
----
 
-# 📝 **11. Summary (Easy to Remember)**
-
-### ✔ NAT = Private → Public
-
-### ✔ Static NAT = One-to-one permanent
-
-### ✔ Dynamic NAT = One-to-one temporary
-
-### ✔ PAT = Many-to-one
-
-### ✔ Overload = PAT
-
-### ✔ NAT uses ACL + inside/outside interfaces
-
-### ✔ Wildcard mask is used in ACLs
-
-### ✔ Without overload = only 1 device can use internet
-
----
-
-# Want me to make this into a clean **PDF-style note** or **One-page revision sheet**?
 
