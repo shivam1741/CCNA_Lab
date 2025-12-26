@@ -12,6 +12,8 @@ It is used to translate **private IP addresses** (inside network) into **public 
 * Public IPv4 addresses are limited.
 * NAT allows thousands of devices to use **a single public IP**.
 
+---
+
 ## NAT Terminology (Very Important)
 
 ### **Inside Local**
@@ -33,8 +35,9 @@ IP assigned to an outside device **from your perspective** (rarely used)
 Real public IP of the outside device
 (Example: Google server IP)
 
+---
 
-## 3. NAT Areas (Inside vs Outside)
+## NAT Areas (Inside vs Outside)
 
 NAT requires interface marking:
 
@@ -58,6 +61,7 @@ Public side
 
 These commands define **network direction**, not NAT type.
 
+---
 
 ## Types of NAT
 
@@ -98,6 +102,7 @@ Example:
 ```
 ip nat inside source list 1 interface g0/1 overload
 ```
+---
 
 ## Why Use PAT?
 
@@ -108,6 +113,7 @@ With overload:
 > share same public IP   
 > router assigns unique **port numbers**
 
+---
 
 ## PAT Configuration (CCNA Lab)
 ![Cisco lab](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202025-12-25%20113654.png)
@@ -147,6 +153,7 @@ ip nat inside source list 1 interface g 0/0/1 overload
 * **overload** → allow many private IPs to share one public IP
   using unique port numbers
 
+---
 
 ## What Is Wildcard Mask (like 0.0.0.255)?**
 
@@ -157,6 +164,7 @@ Wildcard mask is opposite of subnet mask.
 
 Wildcard is used in **ACLs** to match a range of IPs.
 
+---
 
 ## NAT without Overload (Dynamic NAT)
 
@@ -167,6 +175,7 @@ ip nat inside source list 1 pool MYPOOL
 **Limitation:**
 * ONLY ONE private device can go out per public IP.
 
+---
 
 ## How PAT (Overload) Actually Works Internally
 
@@ -187,6 +196,7 @@ Router creates translations like:
 
 Same IP → different port numbers.
 
+---
 
 ## Useful NAT Verification Commands
 
@@ -202,5 +212,5 @@ show ip nat translations
 show ip nat statistics
 ```
 
-
+---
 
