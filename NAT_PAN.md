@@ -42,23 +42,22 @@ NAT requires interface marking:
 
 Private side
 
-```
-interface g0/0
+ ```
+ interface g0/0
  ip nat inside
-```
+ ```
 
 ### **Outside Interface**
 
 Public side
 
-```
-interface g0/1
+ ```
+ interface g0/1
  ip nat outside
-```
+ ```
 
 These commands define **network direction**, not NAT type.
 
----
 
 ## Types of NAT
 
@@ -111,7 +110,7 @@ With overload:
 
 
 ## PAT Configuration (CCNA Lab)
-![Cisco lab]
+![Cisco lab]()
 
 ### **Step 1: Assign inside & outside interfaces**
 
