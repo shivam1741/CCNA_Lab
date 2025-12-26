@@ -110,7 +110,8 @@ With overload:
 > router assigns unique **port numbers**
 
 
-## Complete PAT Configuration (Most Common in CCNA)**
+## PAT Configuration (CCNA Lab)
+![Cisco lab]
 
 ### **Step 1: Assign inside & outside interfaces**
 
