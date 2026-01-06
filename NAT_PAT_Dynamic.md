@@ -155,7 +155,7 @@ ip nat inside source list 1 interface g 0/0/1 overload
 
 ---
 
-## What Is Wildcard Mask (like 0.0.0.255)?**
+## What Is Wildcard Mask (like 0.0.0.255)?
 
 Wildcard mask is opposite of subnet mask.
 
