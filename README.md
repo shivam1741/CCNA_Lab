@@ -9,6 +9,6 @@ This repository covers important CCNA lab topics such as:
 * [Inter-VLAN Routing using Router-on-a-Stick with DHCP](https://github.com/shivam1741/CCNA_Lab/blob/main/Inter-VLAN%20Routing%20using%20Router-on-a-Stick%20with%20DHCP.md)
 * [NAT And PAT (dynamic) concepts with lab configuration](https://github.com/shivam1741/CCNA_Lab/blob/main/NAT_PAN.md)
 * [Static NAT configuration lab](https://github.com/shivam1741/CCNA_Lab/blob/main/NAT_Static_lab.md)
-* [Static + Dynamic combined lab]()
+* [(Static + Dynamic) combined lab](https://github.com/shivam1741/CCNA_Lab/blob/main/Static%2BDynamic_NAT.md)
 
 
