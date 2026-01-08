@@ -31,4 +31,3 @@
 
    Here this command tells the router to send all traffic for unknown destinations to the ISP router at 8.8.8.8.
 ### 
- 
