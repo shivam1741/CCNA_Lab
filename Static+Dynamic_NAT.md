@@ -58,9 +58,9 @@
  
  ### Configuration of Dynamic NAT  
  ***After going back to configure mode***
-   ```
-  ip nat inside source list 1 interface 0/0/1 overload
-   ```
+    ```
+   ip nat inside source list 1 interface 0/0/1 overload
+    ```
  
 
   
