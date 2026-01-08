@@ -39,6 +39,10 @@
    ```
 * When we use ping from the command prompt to access the HTTP server, it will not work because ping uses ICMP packets. In this NAT command, we have specified that the HTTP server should be accessed only using TCP on port 80. Therefore, this NAT rule works only for HTTP traffic, and it will work only when we access the server through a web browser, not through ping.
 * This command means that only TCP packets using port 80 coming from 10.1.1.100 are translated to the public IP 8.8.8.200 on port 80.
-* **For FTP**
-  ***After going back to configure mode***
+* **For FTP**    
+***After going back to configure mode***
+   ```
+   ip nat inside source static 10.1.1.101 8.8.8.201
+   ```
+* Here, we are not specifying any particular protocol or port, so this NAT rule applies to all types of packets. Any traffic coming from the inside local IP address 10.1.1.101 will be translated to the inside global IP address 8.8.8.201, regardless of the protocol.
   
