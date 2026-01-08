@@ -30,4 +30,15 @@
     > 8.8.8.8 (next-hop IP)   
 
    Here this command tells the router to send all traffic for unknown destinations to the ISP router at 8.8.8.8.
-### 
+### Configuration of the static NAT
+* We'll configure Static NAT so that outside PC can access the HTTP and FTP servers.
+* **For HTTP**   
+  ***After going back to configure mode*** 
+   ```
+   ip nat inside source static tcp 10.1.1.100 80 8.8.8.200 80
+   ```
+* When we use ping from the command prompt to access the HTTP server, it will not work because ping uses ICMP packets. In this NAT command, we have specified that the HTTP server should be accessed only using TCP on port 80. Therefore, this NAT rule works only for HTTP traffic, and it will work only when we access the server through a web browser, not through ping.
+* This command means that only TCP packets using port 80 coming from 10.1.1.100 are translated to the public IP 8.8.8.200 on port 80.
+* **For FTP**
+  ***After going back to configure mode***
+  
