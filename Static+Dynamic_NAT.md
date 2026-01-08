@@ -52,11 +52,15 @@
 ***After going back to configure mode***
   ```
   access list 1 permit 10.1.1.0 0.0.0.255
+
   ```
+ * In the place of "10.1.1.0 0.0.0.255" this we can use "any" for all types of network.
+ 
  ### Configuration of Dynamic NAT  
  ***After going back to configure mode***
    ```
-  ip nat inside source list 1 
+  ip nat inside source list 1 interface 0/0/1 overload
+   ```
  
 
   
