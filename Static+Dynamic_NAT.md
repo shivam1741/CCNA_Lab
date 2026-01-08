@@ -47,5 +47,16 @@
 * Here, we are not specifying any particular protocol or port, so this NAT rule applies to all types of packets. Any traffic coming from the inside local IP address 10.1.1.101 will be translated to the inside global IP address 8.8.8.201, regardless of the protocol.
 
 ## Configuration of Dynamic NAT
+### Configuration of Access list(ACL)
+* We create this ACL to define which inside (private) IP addresses are allowed to be translated into public IP addresses.   
+***After going back to configure mode***
+  ```
+  access list 1 permit 10.1.1.0 0.0.0.255
+  ```
+ ### Configuration of Dynamic NAT  
+ ***After going back to configure mode***
+   ```
+  ip nat inside source list 1 
+ 
 
   
