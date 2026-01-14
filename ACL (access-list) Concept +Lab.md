@@ -72,5 +72,4 @@
 ----
 
 # ACL Lab
-
-
+![ACL](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-01-14%20225411.png)
