@@ -50,12 +50,12 @@
   default-router 192.168.1.1
   dns-server 8.8.8.8(optinal)
 
-  ip Dhcp pool VLAN_10
+  ip Dhcp pool VLAN_20
   network 192.168.1.64 255.255.255.192
   default-router 192.168.1.66
   dns-server 8.8.8.8(optinal)
 
-  ip Dhcp pool VLAN_10
+  ip Dhcp pool VLAN_30
   network 192.168.1.128 255.255.255.192
   default-router 192.168.1.130
   dns-server 8.8.8.8(optinal)
