@@ -142,4 +142,4 @@ Now router will:
 
 
 # Lab for Router Password Recovery
-![Router password recovery]()
+![Router password recovery](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-13%20110144.png)
