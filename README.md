@@ -13,5 +13,5 @@ This repository covers important CCNA lab topics such as:
 * [(Static + Dynamic) combined lab](https://github.com/shivam1741/CCNA_Lab/blob/main/Static%2BDynamic_NAT.md)
 * [ACL (access-list) Concept +Lab](https://github.com/shivam1741/CCNA_Lab/blob/main/ACL%20(access-list)%20Concept%20%2BLab.md)
 * [Cisco Router Password Recovery (Without Data Loss)](https://github.com/shivam1741/CCNA_Lab/blob/main/Recover%20password%20on%20a%20Router%20without%20losing%20configuration.md)
-
+* [Cisco Switch Password Recovery (Without Data Loss)](https://github.com/shivam1741/CCNA_Lab/blob/main/Recover%20password%20on%20a%20switch%20without%20losing%20configuration.md)
 
