@@ -1,6 +1,6 @@
 # Cisco Router Password Recovery (Without Data Loss)
 
-## Step 1: Connect via Console
+## Step 1: Connect via Console(Not for cisco packet tracer)
 
 Connect your PC to the router using a console cable and open:
 
@@ -143,3 +143,5 @@ Now router will:
 
 # Lab for Router Password Recovery
 ![Router password recovery](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-13%20110144.png)
+
+
