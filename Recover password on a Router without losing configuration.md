@@ -2,7 +2,7 @@
 
 ## Step 1: Connect via Console(Not for cisco packet tracer)
 
-Connect your PC to the router using a console cable and open:
+* Connect your PC to the router using a console cable and open:
 
 * PuTTY / Tera Term / SecureCRT
 
@@ -15,8 +15,7 @@ Connect your PC to the router using a console cable and open:
   Ctrl + c
 
 * (or Ctrl + Fn + B on some laptops)
-
- You will enter **ROMMON mode**:
+* You will enter **ROMMON mode**:
 
 ```
 rommon 1 >
@@ -32,8 +31,8 @@ confreg 0x2142
 
 Press Enter.
 
-***This tells the router:***
- “Ignore saved config on next boot because when we use "config-register 0x2142" it ignore the saved configuration.
+> ***This tells the router:***    
+> “Ignore saved config on next boot because when we use "config-register 0x2142" it ignore the saved configuration.
 
 
 ## Step 4: Restart Router
@@ -48,7 +47,7 @@ or
 reload
 ```
 
-Router will reboot **without loading passwords**.
+> Router will reboot **without loading passwords**.
 
 
 ## Step 5: Skip Initial Setup
