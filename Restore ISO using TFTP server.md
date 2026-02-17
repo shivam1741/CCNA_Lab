@@ -69,4 +69,4 @@ Think like this:
 ---
 
 # Now Let's Discuss about Lab 
-![Restore ISO]()
+![Restore ISO](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-17%20181054.png)
