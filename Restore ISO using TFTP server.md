@@ -68,5 +68,5 @@ Think like this:
 
 ---
 
-# Now Lab 
-
+# Now Let's Discuss about Lab 
+![Restore ISO]()
