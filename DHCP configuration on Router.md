@@ -37,6 +37,6 @@ For providing DHCP services in a network, we can either use a dedicated DHCP ser
 * After that we can exclude some IP range(If needed) that we don't want to be assigned to devices using ```ip dhcp ip dhcp excluded-address <starting ip > <ending ip>```.
 * It can be done after coming back to configure mode.  
    ```
-   ip dhcp ip dhcp excluded-address <starting ip > <ending ip>
+   ip dhcp excluded-address <starting ip > <ending ip>
    ```
   
