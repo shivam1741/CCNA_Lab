@@ -74,4 +74,4 @@ Think like this:
 ![rommon](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20214322.png)
 * Here we can't boot because we don't have IOS in the router.
 * And we want to restore IOS from TFTP server so we'll use the `tftpdnld` command to download tftp image/file from the server.
-* 
+![tftpdnld]()
