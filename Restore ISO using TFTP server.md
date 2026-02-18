@@ -86,4 +86,4 @@ Think like this:
   rommon 8 > set
   ```
   * After this we can use this command `tftpdnld` for downloading the IOS file from the TFTP server.
-  ![yes]()
+  ![yes](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20224839.png)
