@@ -87,4 +87,5 @@ Think like this:
   ```
 * After this we can use this command `tftpdnld` for downloading the IOS file from the TFTP server.
 ![yes](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20224839.png)
-* Now we need to press `Y` and all set file will be downloaded.
+* Now we need to press `Y` and then file will be downloaded.
+* After this we boot it up and it will boot perfectlly.
