@@ -71,4 +71,7 @@ Think like this:
 # Now Let's Discuss about Lab 
 ![Restore ISO](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-17%20181054.png)
 * Router was in rommon mode so firstly we'll see what we can do in rommon mode to see this we'll use `?`.
-* ![rommon]()
+![rommon](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20214322.png)
+* Here we can't boot because we don't have IOS in the router.
+* And we want to restore IOS from TFTP server so we'll use the `tftpdnld` command to download tftp image/file from the server.
+* 
