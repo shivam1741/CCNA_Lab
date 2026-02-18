@@ -70,3 +70,5 @@ Think like this:
 
 # Now Let's Discuss about Lab 
 ![Restore ISO](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-17%20181054.png)
+* Router was in rommon mode so firstly we'll see what we can do in rommon mode to see this we'll use `?`.
+* ![rommon]()
