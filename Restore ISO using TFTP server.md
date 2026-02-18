@@ -74,7 +74,7 @@ Think like this:
 ![rommon](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20214322.png)
 * Here we can't boot because we don't have IOS in the router.
 * And we want to restore IOS from TFTP server so we'll use the `tftpdnld` command to download tftp image/file from the server.
-![tftpdnld](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20220550.png).
+![tftpdnld](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20220550.png)
 * Here we can see why do we use command `tftpdnld`and what need to be set before using the command.
 * We need to set this
   ```
@@ -85,5 +85,6 @@ Think like this:
   rommon 7 > TFTP_FILE=c2900-universalk9-mz.SPA.151-4.M4.bin
   rommon 8 > set
   ```
-  * After this we can use this command `tftpdnld` for downloading the IOS file from the TFTP server.
-  ![yes](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20224839.png)
+* After this we can use this command `tftpdnld` for downloading the IOS file from the TFTP server.
+![yes](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-18%20224839.png)
+* Now we need to press `Y` and all set file will be downloaded.
