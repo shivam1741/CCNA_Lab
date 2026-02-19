@@ -1,4 +1,4 @@
-# Lab on "Restore Deleted ISO using FTP or TFTP"
+# Lab on "Restore Deleted IOS (Internetwork Operating System) using FTP or TFTP"
 **Before starting Lab, firstly we will see more about FTP and TFTP.**
 
 ## Why do we need FTP and TFTP?
