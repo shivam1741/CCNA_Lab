@@ -15,4 +15,4 @@ This repository covers important CCNA lab topics such as:
 * [Cisco Router Password Recovery (Without Data Loss)](https://github.com/shivam1741/CCNA_Lab/blob/main/Recover%20password%20on%20a%20Router%20without%20losing%20configuration.md)
 * [Cisco Switch Password Recovery (Without Data Loss)](https://github.com/shivam1741/CCNA_Lab/blob/main/Recover%20password%20on%20a%20switch%20without%20losing%20configuration.md)
 * [Restore deleted IOS of router using TFTP server](https://github.com/shivam1741/CCNA_Lab/blob/main/Restore%20ISO%20using%20TFTP%20server.md)
-* [Backup IOS and Router Configuration to TFTP Server]()
+* [Backup IOS and Router Configuration to TFTP Server](https://github.com/shivam1741/CCNA_Lab/blob/main/Backup%20IOS%20and%20Router%20Configuration%20to%20TFTP%20Server.md)
