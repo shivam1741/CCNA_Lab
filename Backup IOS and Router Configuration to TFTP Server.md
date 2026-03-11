@@ -81,4 +81,4 @@ copy startup-config ftp
 ## Backup of IOS to TFTP
 * For this we use command `show flash` to see the file name of IOS, so that we can copy that file to TFTP.
 * It will show like this
-  ![IOS_File]()
+  ![IOS_File](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-03-11%20160743.png)
