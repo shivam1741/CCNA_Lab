@@ -76,3 +76,9 @@ copy startup-config ftp
 * **Running-config** → Current working config (RAM)
 * **Startup-config** → Saved config (NVRAM)
 * Always back up both for safety 
+
+
+## Backup of IOS to TFTP
+* For this we use command `show flash` to see the file name of IOS, so that we can copy that file to TFTP.
+* It will show like this
+  [IOS_File]!
