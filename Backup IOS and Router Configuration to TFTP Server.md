@@ -82,3 +82,6 @@ copy startup-config ftp
 * For this we use command `show flash` to see the file name of IOS, so that we can copy that file to TFTP.
 * It will show like this
   ![IOS_File](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-03-11%20160743.png)
+* Here we can see the file name of IOS.
+* To copy we use command `copy flash tftp` then it will ask for the source filename after entering that filename it will ask for ip adderess of the tftp server.
+* After entering the IP it will save the file to the tftp server.
