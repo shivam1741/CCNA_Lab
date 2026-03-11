@@ -4,7 +4,7 @@
 
 ## Configuration for backup of the running and startup config files
 ![Backup](https://github.com/shivam1741/CCNA_Lab/blob/Image/Screenshot%202026-02-19%20132508.png) 
-### 1️Backup Running Configuration (running-config)
+### Backup Running Configuration (running-config)
 ```
 copy running-config tftp
 ```
@@ -62,7 +62,7 @@ copy startup-config ftp
 
 ---
 
-## 📌 Easy Summary
+## Easy Summary
 
 | File Type      | To TFTP Command            | To FTP Command            |
 | -------------- | -------------------------- | ------------------------- |
@@ -71,12 +71,8 @@ copy startup-config ftp
 
 ---
 
-## 💡 Remember (Important)
+## Remember (Important)
 
 * **Running-config** → Current working config (RAM)
 * **Startup-config** → Saved config (NVRAM)
-* Always back up both for safety ✅
-
----
-
-If you want, I can next show you **how to restore these backups back to router** also 😄
+* Always back up both for safety 
