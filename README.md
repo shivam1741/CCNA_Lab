@@ -17,5 +17,6 @@ This repository covers important CCNA lab topics such as:
 * [Restore deleted IOS of router using TFTP server](https://github.com/shivam1741/CCNA_Lab/blob/main/Restore%20ISO%20using%20TFTP%20server.md)
 * [Backup IOS and Router Configuration to TFTP Server](https://github.com/shivam1741/CCNA_Lab/blob/main/Backup%20IOS%20and%20Router%20Configuration%20to%20TFTP%20Server.md)
 
-# Let's practice by Solving Real CCNA Questions
-* I'll write those topic or Questions where i faced some problem during solving.
+# Let's practice CCNA by Solving Real CCNA Questions(Daily around 50 questions).
+I'll write those topic or Questions in which I faced some problem during solving the questions.
+* [Days_1]()
