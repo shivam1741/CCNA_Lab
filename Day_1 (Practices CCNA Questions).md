@@ -494,3 +494,134 @@ Packet dies safely instead of looping forever.
 
 ---
 ---
+
+# Administrative Distance
+Administrative Distance is a value used by routers to decide **which route source is more trustworthy** when multiple routing protocols provide routes to the same destination.
+
+## Simple Idea
+
+Imagine a router learns this network:
+
+```
+192.168.1.0/24
+```
+
+from different sources:
+
+* Static Route
+* Enhanced Interior Gateway Routing Protocol
+* Open Shortest Path First
+
+Now router gets confused:
+
+> “Which one should I trust?”
+
+Administrative Distance solves this problem.
+
+
+## Rule
+
+```
+Lower AD = More Trusted
+```
+
+
+## Common Administrative Distances
+
+| Route Source    | AD  |
+| --------------- | --- |
+| Connected Route | 0   |
+| Static Route    | 1   |
+| EIGRP Internal  | 90  |
+| OSPF            | 110 |
+| RIP             | 120 |
+
+So if router learns same route from:
+
+* OSPF → 110
+* RIP → 120
+
+Router chooses OSPF because 110 is lower.
+
+
+## Important Difference
+
+Many beginners confuse:
+
+* Administrative Distance
+* Metric
+
+They are different.
+
+
+### Administrative Distance
+
+Used to compare:
+
+> Different routing protocols
+
+Example:
+
+* OSPF vs RIP
+
+### Metric
+
+Used inside the SAME routing protocol.
+
+Examples:
+
+* RIP uses hop count
+* OSPF uses cost
+* EIGRP uses bandwidth + delay
+
+
+## How AD Works Internally
+
+Suppose router receives:
+
+```
+Route A from OSPF → AD 110
+Route B from RIP → AD 120
+```
+
+Router first compares AD:
+
+```
+110 < 120
+```
+
+So RIP route is ignored.
+
+Then inside OSPF, router checks metric to choose best OSPF path.
+
+
+## Is AD Calculated?
+
+Usually NO.
+Administrative Distance is mostly a **predefined default value** set by the router vendor (like Cisco).
+
+Examples:
+
+* OSPF always defaults to 110
+* RIP defaults to 120
+
+But administrators can manually change it.
+
+Example on Cisco:
+
+```
+distance 95
+```
+
+This changes trust level.
+
+
+## Real-Life Analogy
+
+Think of AD like trust between friends:
+
+* Friend A always gives correct directions → AD low
+* Friend B often gives wrong directions → AD high
+
+Router trusts the lower AD source more.
+
