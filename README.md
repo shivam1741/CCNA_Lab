@@ -21,4 +21,5 @@ This repository covers important CCNA lab topics such as:
 # Let's practice CCNA by Solving Real CCNA Questions(Daily around 50 questions).
 I'll write those topic or Questions in which I faced some problem during solving the questions.
 * [Days_1]()
+   * [VTP (VLAN Trunking Protocol) Concepts]()
 * [Days 2]()
