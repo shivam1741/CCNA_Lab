@@ -16,7 +16,7 @@ This repository covers important CCNA lab topics such as:
 * [Cisco Switch Password Recovery (Without Data Loss)](https://github.com/shivam1741/CCNA_Lab/blob/main/Recover%20password%20on%20a%20switch%20without%20losing%20configuration.md)
 * [Restore deleted IOS of router using TFTP server](https://github.com/shivam1741/CCNA_Lab/blob/main/Restore%20ISO%20using%20TFTP%20server.md)
 * [Backup IOS and Router Configuration to TFTP Server](https://github.com/shivam1741/CCNA_Lab/blob/main/Backup%20IOS%20and%20Router%20Configuration%20to%20TFTP%20Server.md)
-* [VTP (VLAN Trunking Protocol) Concepts]()
+
 
 # Let's practice CCNA by Solving Real CCNA Questions(Daily around 50 questions).
 I'll write those topic or Questions in which I faced some problem during solving the questions.
