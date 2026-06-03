@@ -451,6 +451,12 @@ Answer: PC ARPs for gateway MAC (broadcasts FF:FF:FF:FF:FF:FF asking for 192.168
 7. **TCP vs UDP** — reliable ordered = TCP, fast low-overhead = UDP
 
 ---
+---
 
-*CCNA 200-301 Section 1 Notes — ready for GitHub*
-*Next: Section 2 — IP Addressing & Subnetting*
+### Which OSI layer adds a TRAILER (not just a header) to the data?
+A. Network layer
+B. Transport layer
+C. Application layer
+D. Data Link layer
+E. Physical layer
+Explanation: The Data Link layer is the ONLY layer that adds both a header AND a trailer. The trailer contains an FCS (Frame Check Sequence) for error detection. All other layers add headers only. This is a very common trick question.
