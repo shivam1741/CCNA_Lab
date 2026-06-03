@@ -624,4 +624,14 @@ Think of AD like trust between friends:
 * Friend B often gives wrong directions → AD high
 
 Router trusts the lower AD source more.
+---
+---
+
+### Which OSI layer adds a TRAILER (not just a header) to the data?
+A. Network layer
+B. Transport layer
+C. Application layer
+D. Data Link layer
+E. Physical layer
+Explanation: The Data Link layer is the ONLY layer that adds both a header AND a trailer. The trailer contains an FCS (Frame Check Sequence) for error detection. All other layers add headers only. This is a very common trick question.
 
