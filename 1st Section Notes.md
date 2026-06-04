@@ -462,6 +462,7 @@ E. Physical layer
 
 Explanation: The Data Link layer is the ONLY layer that adds both a header AND a trailer. The trailer contains an FCS (Frame Check Sequence) for error detection. All other layers add headers only. This is a very common trick question.    
 
+
 ### Which statement BEST describes the difference between Layer 2 error detection and Layer 4 error recovery?    
 A. Layer 2 recovers errors; Layer 4 only detects them     
 B. Layer 2 detects errors via FCS and drops bad frames; Layer 4 (TCP) detects AND recovers from errors via retransmission      
@@ -470,3 +471,26 @@ D. Layer 4 detects errors; Layer 2 recovers them
 E. Neither layer handles errors — that is Layer 7's job     
 
 Explanation: Layer 2 FCS detects bit errors — if CRC fails, the frame is DROPPED silently (no retransmission request). Layer 4 TCP detects missing segments (via ACKs/sequence numbers) AND recovers by requesting retransmission. These are completely different mechanisms.
+
+
+### Which of the following correctly describes a Proxy ARP?   
+A. ARP sent by a host for its own IP to detect conflicts    
+B. A router responds to ARP requests on behalf of hosts on other networks, allowing hosts to reach remote networks without knowing the default gateway    
+C. ARP used to find the MAC of the DNS server    
+D. A switch that forwards ARP requests between VLANs    
+E. ARP used between routers to exchange routing information     
+
+Explanation: Proxy ARP: a router responds to ARP requests for IP addresses on OTHER networks, using its own MAC. This lets hosts reach remote networks even without a default gateway configured. It's enabled by default on Cisco routers but is considered bad practice as it creates large ARP tables and hides network topology.
+
+
+
+### Scenario: A DHCP server has a pool of 192.168.1.1–192.168.1.254. A PC requests an IP and gets 192.168.1.50 with a 7-day lease. After 3.5 days (50% of lease), what does the PC do?    
+Based on the scenario above, what is the correct answer?     
+
+A. Nothing — it waits until the lease fully expires    
+B. The PC broadcasts a DHCP Discover to find a new server     
+C. The PC sends a unicast DHCP Request directly to the same server to renew the lease     
+D. The PC releases the IP and requests a completely new one      
+E. The PC sends a multicast DHCP renewal      
+Explanation: DHCP lease renewal: at 50% (T1 timer), the client sends a unicast DHCP Request to the ORIGINAL server to renew. At 87.5% (T2 timer), if no response, it broadcasts to ANY server. At 100%, lease expires and full DORA process restarts. This is a very common exam trap — 50% = unicast to same server, NOT broadcast.
+
