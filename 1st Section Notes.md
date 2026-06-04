@@ -459,4 +459,14 @@ B. Transport layer
 C. Application layer    
 D. Data Link layer    
 E. Physical layer     
-Explanation: The Data Link layer is the ONLY layer that adds both a header AND a trailer. The trailer contains an FCS (Frame Check Sequence) for error detection. All other layers add headers only. This is a very common trick question.
+
+Explanation: The Data Link layer is the ONLY layer that adds both a header AND a trailer. The trailer contains an FCS (Frame Check Sequence) for error detection. All other layers add headers only. This is a very common trick question.    
+
+### Which statement BEST describes the difference between Layer 2 error detection and Layer 4 error recovery?    
+A. Layer 2 recovers errors; Layer 4 only detects them     
+B. Layer 2 detects errors via FCS and drops bad frames; Layer 4 (TCP) detects AND recovers from errors via retransmission      
+C. Both layers provide identical error handling     
+D. Layer 4 detects errors; Layer 2 recovers them     
+E. Neither layer handles errors — that is Layer 7's job     
+
+Explanation: Layer 2 FCS detects bit errors — if CRC fails, the frame is DROPPED silently (no retransmission request). Layer 4 TCP detects missing segments (via ACKs/sequence numbers) AND recovers by requesting retransmission. These are completely different mechanisms.
