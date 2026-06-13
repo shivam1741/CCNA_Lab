@@ -26,4 +26,4 @@ I'll write those topic or Questions in which I faced some problem during solving
 * [1st Sections Practice Notes](https://github.com/shivam1741/CCNA_Lab/blob/main/1st%20Section%20Notes.md)
 * [2nd Sections Practice Notes](https://github.com/shivam1741/CCNA_Lab/blob/main/2nd%20Sections%20Notes.md)
 * [Trunk, Native VLAN and Related concept](https://github.com/shivam1741/CCNA_Lab/blob/main/Trunk%2C%20Native%20VLAN%20and%20Related%20Concept.md)
-* [3rd Sections Practice Notes]()
+* [3rd Sections Practice Notes](https://github.com/shivam1741/CCNA_Lab/blob/main/3rd%20Section%20Notes.md)
